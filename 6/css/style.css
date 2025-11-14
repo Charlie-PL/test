@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(10deg, #2483ff 60%, #2c6afb 60%);
+}
+
+nav {
+  margin-top: 100px;
+  background-color: #292929;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  font-size: 24px;
+}
+
+.menu-item {
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+  line-height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: rgba(45, 56, 202, 0.2941176471);
+}
+
+.dropdown {
+  position: absolute;
+  width: 300px;
+}
+
+.dropdown li {
+  display: none;
+  opacity: 0;
+  background-color: #5e5e60;
+  transition: text-shadow 0.3s;
+}
+
+.dropdown li:hover {
+  color: #1e298f;
+  text-shadow: 0 0 10px royalblue;
+}
+
+.menu-item:hover .dropdown li {
+  display: block;
+  animation: menu1 0.5s forwards;
+}
+
+.menu-item:hover .dropdown li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.menu-item:hover .dropdown li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.menu-item:hover .dropdown li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.menu-item:hover .dropdown li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.menu-item:hover .dropdown li:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes menu1 {
+  from {
+    opacity: 0;
+    rotate: 35deg;
+  }
+  to {
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
+.two:hover .dropdown li {
+  animation: menu2 0.4s forwards;
+}
+
+@keyframes menu2 {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.three:hover .dropdown li {
+  animation: menu3 0.4s forwards;
+}
+
+@keyframes menu3 {
+  from {
+    transform: rotateY(-60deg) translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg) translateX(0);
+    opacity: 1;
+  }
+}
+.four:hover .dropdown li {
+  animation: menu4 0.3s forwards;
+  transform-origin: top;
+}
+
+@keyframes menu4 {
+  from {
+    opacity: 0;
+    transform: scale(0.6) translateY(40px);
+  }
+  to {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

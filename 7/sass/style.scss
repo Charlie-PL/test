@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 36px;
+	font-family: "Ubuntu", sans-serif;
+	color: #fff;
+	background-color: #333;
+}
+.tooltip-box {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+}
+
+.tooltip {
+	position: relative;
+}
+.tooltip::before {
+	content: "";
+	display: none;
+	position: absolute;
+	background-color: #999;
+	padding: 0.5em 1em;
+	border-radius: 8px;
+	font-size: 14px;
+}
+
+.tooltip:hover.tooltip::before {
+	display: block;
+}
+
+.tooltip-top::before {
+	content: "tekst w tooltip top na górze";
+	bottom: 130%;
+}
+.tooltip-right::before {
+	content: "tekst w tooltip top po prawej";
+	left: 130%;
+}
+
+// =------------------------------------input--------
+.input-box {
+	position: relative;
+	// background-color: tomato;
+}
+input {
+	padding: 1em;
+	width: 400px;
+	border-radius: 9px;
+	border: 2px solid #aaa;
+	background: none;
+	color: #aaa;
+}
+label {
+	position: absolute;
+	font-size: 20px;
+	left: 2%;
+	padding: 0 0.5em;
+	top: 32%;
+	transition: top 0.3s;
+	pointer-events: none;
+}
+input:focus {
+	outline: none;
+	border: 2px solid royalblue;
+}
+
+input:focus ~ label {
+	top: -15%;
+	background-color: #333;
+	color: royalblue;
+}
